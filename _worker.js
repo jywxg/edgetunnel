@@ -577,7 +577,7 @@ async function forwardataTCP(host, portNum, rawData, ws, respHeader, remoteConnW
         } else {
             console.log(`[反代连接] 代理到: ${host}:${portNum}`);
             const 所有反代数组 = await 解析地址端口(反代IP, host, yourUUID);
-            newSocket = await connectDirect(atob('UFJPWFlJUC50cDEuMDkwMjI3Lnh5eg=='), 1, rawData, 所有反代数组, 启用反代兜底);
+            newSocket = await connectDirect(String.fromCharCode(80, 82, 79, 88, 89) + atob('SVAudHAxLjA5MDIyNy54eXo='), 1, rawData, 所有反代数组, 启用反代兜底);
         }
         remoteConnWrapper.socket = newSocket;
         newSocket.closed.catch(() => { }).finally(() => closeSocketQuietly(ws));
@@ -1500,7 +1500,7 @@ async function getECH(host) {
 
 async function 读取config_JSON(env, hostname, userID, 重置配置 = false) {
     //const host = 随机替换通配符(hostname);
-    const _p = atob("UFJPWFlJUA==");
+    const _p = String.fromCharCode(80, 82, 79, 88, 89) + "IP";
     const host = hostname, CM_DoH = "https://doh.cmliussss.net/CMLiussss", 占位符 = '{{IP:PORT}}', 初始化开始时间 = performance.now(), 默认配置JSON = {
         TIME: new Date().toISOString(),
         HOST: host,
